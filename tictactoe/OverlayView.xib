@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OverlayViewController" customModule="tictactoe" customModuleProvider="target">
+            <connections>
+                <outlet property="difficultySwitch" destination="eIX-Zx-b0G" id="q4u-wg-oYm"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Qbs-pb-Jwt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="559"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k78-o2-6BK">
+                    <rect key="frame" x="177" y="16" width="60" height="4"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="78L-zI-U61"/>
+                        <constraint firstAttribute="width" constant="60" id="gZn-Fn-6LL"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="quz-mv-aMC">
+                    <rect key="frame" x="69.5" y="44" width="275.5" height="31"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Easy Mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aT-1K-Dj4">
+                            <rect key="frame" x="0.0" y="0.0" width="218.5" height="31"/>
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="47"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIX-Zx-b0G">
+                            <rect key="frame" x="226.5" y="0.0" width="51" height="31"/>
+                            <connections>
+                                <action selector="difficultySettingsChanged:" destination="-1" eventType="valueChanged" id="ctA-os-GPL"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="kindpng_732725" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-l3-aYN">
+                    <rect key="frame" x="0.0" y="83" width="497" height="476"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="476" id="ZuG-0U-dRE"/>
+                        <constraint firstAttribute="width" constant="497" id="xph-fB-mdw"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="k78-o2-6BK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="I6Q-nY-sqn"/>
+                <constraint firstItem="quz-mv-aMC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sso-hm-Jlx"/>
+                <constraint firstItem="quz-mv-aMC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="bRb-f2-aCM"/>
+                <constraint firstItem="fjQ-l3-aYN" firstAttribute="top" secondItem="quz-mv-aMC" secondAttribute="bottom" constant="54" id="sHj-6g-moQ"/>
+                <constraint firstItem="k78-o2-6BK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="xFG-pg-UTh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="85.379464285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kindpng_732725" width="1776" height="1674"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
